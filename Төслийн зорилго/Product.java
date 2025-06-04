@@ -19,11 +19,12 @@ public class Product {
         if (quantity >= amount) {
             quantity -= amount;
         } else {
-            System.out.println("Хангалттай нөөц байхгүй байна: " + name);
+            System.out.println("NOT enough resource: " + name);
         }
     }
 
     public void printInfo() {
-        System.out.println("📦 " + name + " | Төрөл: " + category + " | Үнэ: ₮" + price + " | Тоо: " + quantity);
-    }
+    System.out.println(name + " | Category: " + category + " | Price: ₮" + price + " | Quantity: " + quantity);
 }
+
+    }
