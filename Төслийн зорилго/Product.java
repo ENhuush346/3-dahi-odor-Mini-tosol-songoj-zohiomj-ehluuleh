@@ -24,7 +24,6 @@ public class Product {
     }
 
     public void printInfo() {
-    System.out.println(name + " | Category: " + category + " | Price: ₮" + price + " | Quantity: " + quantity);
-}
-
+        System.out.println(name + " | Category: " + category + " | Price: MNT " + price + " | Quantity: " + quantity);
     }
+}
