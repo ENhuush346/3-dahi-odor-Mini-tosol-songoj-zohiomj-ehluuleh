@@ -52,12 +52,18 @@
 
 #### `Product.java`
 ```java
+// Product класс нь дэлгүүрийн нэг барааг төлөөлнө
 public class Product {
+    // Барааны нэр
     private String name;
+    // Барааны төрөл/ангилал (жишээ: хүнс, ундаа гэх мэт)
     private String category;
+    // Барааны үнэ
     private double price;
+    // Барааны агуулах дахь тоо ширхэг
     private int quantity;
 
+    // Конструктор: шинэ бараа үүсгэхдээ нэр, төрөл, үнэ, тоог тохируулна
     public Product(String name, String category, double price, int quantity) {
         this.name = name;
         this.category = category;
@@ -65,8 +71,22 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public void addStock(int amount) { quantity += amount; }
-    public void reduceStock(int amount) { if (quantity >= amount) quantity -= amount; }
+    // stock буюу нөөцийг нэмэх функц
+    // жишээ нь, агуулахад бараа ирсэн үед тоог нэмнэ
+    public void addStock(int amount) {
+        quantity += amount;
+    }
+
+    // stock-оос тоо хасах функц
+    // хэрвээ агуулахад байгаа барааны тоо хүрэлцэхгүй бол хасахгүй
+    public void reduceStock(int amount) {
+        if (quantity >= amount) {
+            quantity -= amount;
+        }
+    }
+
+    // Барааны мэдээллийг дэлгэцэнд хэвлэх функц
+    // нэр, төрөл, үнэ, тоог тодорхой хэлбэрээр харуулна
     public void printInfo() {
         System.out.println(name + " - " + category + " - ₮" + price + " - " + quantity + " ширхэг");
     }
